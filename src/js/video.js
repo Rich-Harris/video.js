@@ -225,7 +225,8 @@ setup.autoSetupTimeout(1, videojs);
  *
  * @type {string}
  */
-videojs.VERSION = require('../../package.json').version;
+import { version } from '../../package.json';
+videojs.VERSION = version;
 
 /**
  * The global options object. These are the settings that take effect
@@ -722,7 +723,4 @@ videojs.dom = Dom;
  */
 videojs.url = Url;
 
-// We use Node-style module.exports here instead of ES6 because it is more
-// compatible with different module systems.
-module.exports = videojs;
-
+export default videojs;
