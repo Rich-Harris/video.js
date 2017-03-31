@@ -34,7 +34,8 @@
     "babel": "babel src/js -d es5",
     "prepublish": "not-in-install && run-p docs:api build || in-install",
     "prepush": "npm run lint -- --errors",
-    "version": "node build/version.js && git add CHANGELOG.md"
+    "version": "node build/version.js && git add CHANGELOG.md",
+    "rollup": "rollup -c"
   },
   "repository": {
     "type": "git",
